@@ -1,2 +1,24 @@
 /*Developed by: XPLegend*/
 /*Start of development: 17/05/2024*/
+
+--root{}
+
+body{
+	background-color: rgb(245,245,245);
+}
+
+footer{
+	background-color: rgba(136, 136, 136, 0.6);
+	border-radius: 10px;
+	margin-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#nav-bar{
+	
+}
+
+#main-container{
+	
+}
