@@ -1,7 +1,9 @@
 /*Developed by: XPLegend*/
 /*Start of development: 17/05/2024*/
 
---root{}
+--root{
+	--nav-height: 100px;
+}
 
 body{
 	background-color: rgb(245,245,245);
@@ -16,9 +18,43 @@ footer{
 }
 
 #nav-bar{
-	
+	height: 50px;
+	margin-left: 2px; margin-right: 2px;
+	border: solid gray 2px;
+	border-radius: 25px;
+	display: flex;
 }
 
 #main-container{
 	
+}
+
+.display {
+	width: fit-content;
+	height: 45px;
+	margin-top: auto; margin-bottom: auto;
+	display: flex;
+}
+
+#display-time{
+	width: 200px;
+	height: 100%;
+	margin-top: 0px; margin-bottom: 0px;
+	border-right: solid gray 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+	font-size: 30px;
+}
+#display-date{
+	width: 200px;
+	height: 100%;
+	margin-top: 0px; margin-bottom: 0px;
+	border-right: solid gray 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+	font-size: 30px;
 }
