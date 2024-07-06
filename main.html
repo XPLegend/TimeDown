@@ -27,20 +27,23 @@
 
 	<div id="main-container">
 		<div class="counter">
-			<div class="date-imput" id="start-date">
-				<!--Imput for the calculator, add period start date-->
-				<input />
+			<div class="counter-flex-wrapper">
+				<div class="date-input" id="start-date">
+					<!--Imput for the calculator, add period start date-->
+					<input type="date" name="date-input-first" class="input" id="date-input-first" />
+				</div>
+				<div class="date-input" id="finish-date">
+					<!--input for the calculator, add period finish date-->
+					<input type="date" name="date-input-last" class="input" id="date-input-last" />
+				</div>
+				<div class="output" id="output-date">
+					<!--Where the calculator will display how many days, months or years are left-->
+					<label class="label-output" id="label-date-output"></label>
+				</div>
 			</div>
-			<div class="date-imput" id="finish-date">
-				<!--Input for the calculator, add period finish date-->
-				<input />
-			</div>
-			<div class="output" id="output-date">
-				<!--Where the calculator will display how many days, months or years are left-->
-				<input />
-			</div>
-			<div id="calculate-btn">
-				
+			<br>
+			<div class="calculate-btn" id="calculate-date-btn">
+				Calculate
 			</div>
 		</div>
 

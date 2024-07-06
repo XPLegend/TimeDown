@@ -22,3 +22,27 @@ function currentTime() {
 currentTime();
 setInterval(currentTime, 1000);
 
+//calculate date difference
+
+function calculateDateDiff() {
+	const startDate = document.getElementById("date-input-first").value;
+	const finishDate = document.getElementById("date-input-last").value;
+
+	let startDay = startDate.day;
+	let startMonth = startDate.month;
+	let startYear = startDate.year;
+
+	let finishDay = finishDate.day;
+	let finishMonth = finishDate.month;
+	let finishYear = finishDate.year;
+
+	//debug
+	console.log(startDay);
+	console.log(startMonth);
+	console.log(startYear);
+
+	console.log(finishDay);
+	console.log(finishMonth);
+	console.log(finishYear);
+
+}
