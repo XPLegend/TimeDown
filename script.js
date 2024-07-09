@@ -1,7 +1,7 @@
 //Developed by: XPLegend
 //Start of development: 17/05/2024
 
-//Display Current Time
+//DISPLAY CURRENT TIME
 function currentTime() {
 	const time = document.getElementById('display-time');
 	const date = document.getElementById('display-date');
@@ -22,27 +22,31 @@ function currentTime() {
 currentTime();
 setInterval(currentTime, 1000);
 
-//calculate date difference
+//CALCULATE DAY DIFFERENCES 
+//I wanted to experiment with something more difficult so I used "addEventListener" instead of "onClick"
 
-function calculateDateDiff() {
-	const startDate = document.getElementById("date-input-first").value;
-	const finishDate = document.getElementById("date-input-last").value;
+document.getElementById("calculate-date-btn").addEventListener('click', function() {
+	const startDateValue = document.getElementById("date-input-first").value;
+	const finishDateValue = document.getElementById("date-input-last").value;
+	//DEGUB
+	console.log('Start date:', startDateValue, 'Finish date:', finishDateValue);
 
-	let startDay = startDate.day;
-	let startMonth = startDate.month;
-	let startYear = startDate.year;
+	if(startDateValue && finishDateValue) {
+		const startDate = new Date(startDateValue);
+		const finishDate = new Date(finishDateValue);
 
-	let finishDay = finishDate.day;
-	let finishMonth = finishDate.month;
-	let finishYear = finishDate.year;
-
-	//debug
-	console.log(startDay);
-	console.log(startMonth);
-	console.log(startYear);
-
-	console.log(finishDay);
-	console.log(finishMonth);
-	console.log(finishYear);
-
-}
+		const timeDifference = (finishDate - startDate) / (1000 * 3600 * 24); //From milliseconds to days
+		//DEBUG
+		console.log(timeDifference);
+		//Display in label
+		document.getElementById("label-date-output").innerText = `${timeDifference}`
+	} else {
+		if (startDateValue) {
+			document.getElementById("label-date-output").innerText = 'Second Date Missing'
+		} else if(finishDateValue) {
+			document.getElementById("label-date-output").innerText = 'First Date Missing'
+		} else {
+			document.getElementById("label-date-output").innerText = 'Date Missing'
+		}
+	}
+});
