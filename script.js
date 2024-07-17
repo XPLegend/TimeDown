@@ -39,7 +39,7 @@ document.getElementById("calculate-date-btn").addEventListener('click', function
 		//DEBUG
 		console.log(timeDifference);
 		//Display in label
-		document.getElementById("label-date-output").innerText = `${timeDifference}`
+		document.getElementById("label-date-output").innerText = `${timeDifference} days`
 	} else {
 		if (startDateValue) {
 			document.getElementById("label-date-output").innerText = 'Second Date Missing'
